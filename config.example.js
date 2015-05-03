@@ -12,5 +12,11 @@ module.exports =
     {
         app_id: 'sign up @ login.wetfish.net',
         app_secret: 'to generate these'
-    }
+    },
+
+    // List of allowed user accounts
+    allowed:
+    [
+        'rachel'
+    ]
 }

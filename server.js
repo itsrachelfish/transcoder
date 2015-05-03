@@ -89,5 +89,5 @@ var required =
     model: model
 }
 
-require('./routes/pages')(required);
 require('./routes/login')(required);
+require('./routes/pages')(required);
