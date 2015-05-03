@@ -90,3 +90,4 @@ var required =
 }
 
 require('./routes/pages')(required);
+require('./routes/login')(required);

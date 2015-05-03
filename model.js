@@ -10,7 +10,7 @@ var model =
     connect: function(config)
     {
         model.config = config;
-        model.redis = redis.createClient(6334);
+        model.redis = redis.createClient(6335);
     }
 }
 
