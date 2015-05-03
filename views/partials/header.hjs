@@ -1,1 +1,16 @@
-<!-- Pretend this is a nav bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <a class="navbar-brand" href="/">Transcoder</a>
+
+    <ul class="nav navbar-nav">
+
+    {{#session.user}}
+        <li><a href="/logout">Logout</a></li>
+    {{/session.user}}
+
+    {{^session.user}}
+        <li><a href="/login">Login</a></li>
+    {{/session.user}}
+    </ul>
+</nav>
+
+<div class="content container-fluid">

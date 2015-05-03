@@ -11,6 +11,7 @@
     "redis": "~0.12.1",
     "hjs": "0.0.6",
     "extend": "~2.0.1",
-    "wetfish-login": "git://github.com/wetfish/login"
+    "wetfish-login": "git://github.com/wetfish/login",
+    "bootstrap": "~3.3.4"
   }
 }
