@@ -2,19 +2,55 @@
     {{> header}}
 
     <form>
-        <div class="form-group">
+        <div class="form-group col-sm-12">
             <label for="command">Command Used</label>
 
             <select class="form-control" id="command">
                 <option value="">Select one...</option>
                 <option value="ffmpeg">FFmpeg</option>
-                <option value="gst-launch">GStreamer</option>
+                <option value="gstreamer">GStreamer</option>
                 <option value="vlc">VLC</option>
             </select>
         </div>
 
-        <div class="form-group">
-            <label for="output">Output</label>
+        <div class="form-group col-sm-6">
+            <label>Input File</label>
+            <input class="form-control" id="infile">
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label>Output File</label>
+            <input class="form-control" id="outfile">
+        </div>
+
+        <!--
+        Todo:
+        
+        Audio
+            Enabled
+            Language
+            Bitrate
+            Codec
+            Channels
+
+        Subtitles
+            Enabled
+            Language
+
+        Video
+            Enabled
+            Bitrate
+            Codec
+            Size
+            
+        Extras
+            High priority?
+            Frames per second?
+            
+        -->
+
+        <div class="form-group col-sm-12">
+            <label for="output">Command Output</label>
 
             <textarea class="form-control" id="output" readonly></textarea>
         </div>
