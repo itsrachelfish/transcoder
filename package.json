@@ -12,6 +12,7 @@
     "hjs": "0.0.6",
     "extend": "~2.0.1",
     "wetfish-login": "git://github.com/wetfish/login",
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4"
   }
 }

@@ -1,5 +1,23 @@
 {{> head}}
     {{> header}}
 
-    Hello world!
+    <form>
+        <div class="form-group">
+            <label for="command">Command Used</label>
+
+            <select class="form-control" id="command">
+                <option value="">Select one...</option>
+                <option value="ffmpeg">FFmpeg</option>
+                <option value="gst-launch">GStreamer</option>
+                <option value="vlc">VLC</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="output">Output</label>
+
+            <textarea class="form-control" id="output" readonly></textarea>
+        </div>
+    </form>
+
 {{> foot}}
