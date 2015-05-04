@@ -14,40 +14,123 @@
         </div>
 
         <div class="form-group col-sm-6">
-            <label>Input File</label>
+            <label for="infile">Input File</label>
             <input class="form-control" id="infile">
         </div>
 
         <div class="form-group col-sm-6">
-            <label>Output File</label>
+            <label for="outfile">Output File</label>
             <input class="form-control" id="outfile">
         </div>
 
-        <!--
-        Todo:
+        <div id="audio" class="clearfix">
+            <div class="form-group col-sm-2">
+                <label for="audio-enabled">Audio Enabled?</label>
+
+                <div>
+                    <input class="radio-inline" name="audio-enabled" value="1" id="audio-enabled" type="radio"> Yes
+                    <input class="radio-inline" name="audio-enabled" value="0" id="audio-enabled" type="radio" checked> No
+                </div>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-bitrate">Bitrate</label>
+                <input class="form-control" disabled>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-codec">Codec</label>
+                <input class="form-control" disabled>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-language">Language</label>
+                <input class="form-control" disabled>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-channels">Channels</label>
+                <input class="form-control" disabled>
+            </div>
+        </div>
+
+        <div id="video" class="clearfix">
+            <div class="form-group col-sm-2">
+                <label>Video Enabled?</label>
+
+                <div>
+                    <input class="radio-inline" name="video-enabled" value="1" id="video-enabled" type="radio"> Yes
+                    <input class="radio-inline" name="video-enabled" value="0" id="video-enabled" type="radio" checked> No
+                </div>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-enabled">Bitrate</label>
+                <input class="form-control" disabled>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-enabled">Codec</label>
+                <input class="form-control" disabled>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-enabled">Maximum Width</label>
+                <input class="form-control" disabled>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-enabled">Maximum Height</label>
+                <input class="form-control" disabled>
+            </div>
+        </div>
+
+        <div id="subtitles" class="clearfix">
+            <div class="form-group col-sm-2">
+                <label for="subs-enabled">Subtitles Enabled?</label>
+
+                <div>
+                    <input class="radio-inline" name="subs-enabled" value="1" id="subs-enabled" type="radio"> Yes
+                    <input class="radio-inline" name="subs-enabled" value="0" id="subs-disabled" type="radio" checked> No
+                </div>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="audio-enabled">Language</label>
+                <input class="form-control" disabled>
+            </div>
+        </div>
+
+        <hr>
         
-        Audio
-            Enabled
-            Language
-            Bitrate
-            Codec
-            Channels
+        <div id="extra" class="clearfix">
+            <div class="form-group col-sm-12">
+                <label for="subs-enabled">Miscellaneous Options</label>
+            </div>
 
-        Subtitles
-            Enabled
-            Language
+            <div class="form-group col-sm-2">
+                <label for="high-priority">High Priority</label>
 
-        Video
-            Enabled
-            Bitrate
-            Codec
-            Size
-            
-        Extras
-            High priority?
-            Frames per second?
-            
-        -->
+                <div>
+                    <input class="radio-inline" name="high-priority" value="1" id="high-priority" type="radio"> Yes
+                    <input class="radio-inline" name="high-priority" value="0" id="high-priority" type="radio" checked> No
+                </div>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="deinterlace">Deinterlace Video</label>
+
+                <div>
+                    <input class="radio-inline" name="deinterlace" value="1" id="deinterlace" type="radio"> Yes
+                    <input class="radio-inline" name="deinterlace" value="0" id="deinterlace" type="radio" checked> No
+                </div>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="high-priority">Frames Per Second</label>
+                <input class="form-control">
+            </div>
+        </div>
 
         <div class="form-group col-sm-12">
             <label for="output">Command Output</label>
