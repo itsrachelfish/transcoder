@@ -3,9 +3,9 @@
 
     <form>
         <div class="form-group col-sm-12">
-            <label for="command">Command Used</label>
+            <label>Command Used</label>
 
-            <select class="form-control" id="command">
+            <select class="form-control" name="command">
                 <option value="">Select one...</option>
                 <option value="ffmpeg">FFmpeg</option>
                 <option value="gstreamer">GStreamer</option>
@@ -14,128 +14,128 @@
         </div>
 
         <div class="form-group col-sm-6">
-            <label for="infile">Input File</label>
-            <input class="form-control" id="infile">
+            <label>Input File</label>
+            <input class="form-control" name="file[in]">
         </div>
 
         <div class="form-group col-sm-6">
-            <label for="outfile">Output File</label>
-            <input class="form-control" id="outfile">
+            <label>Output File</label>
+            <input class="form-control" name="file[out]">
         </div>
 
-        <div id="audio" class="clearfix">
+        <div class="audio clearfix">
             <div class="form-group col-sm-2">
-                <label for="audio-enabled">Audio Enabled?</label>
+                <label>Audio Enabled?</label>
 
                 <div>
-                    <input class="radio-inline" name="audio-enabled" value="1" id="audio-enabled" type="radio"> Yes
-                    <input class="radio-inline" name="audio-enabled" value="0" id="audio-enabled" type="radio" checked> No
+                    <input class="radio-inline" name="audio[enabled]" value="1" type="radio"> Yes
+                    <input class="radio-inline" name="audio[enabled]" value="0" type="radio" checked> No
                 </div>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-bitrate">Bitrate</label>
-                <input class="form-control" disabled>
+                <label>Bitrate</label>
+                <input class="form-control" name="audio[bitrate]" disabled>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-codec">Codec</label>
-                <input class="form-control" disabled>
+                <label>Codec</label>
+                <input class="form-control" name="audio[codec]" disabled>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-language">Language</label>
-                <input class="form-control" disabled>
+                <label>Language</label>
+                <input class="form-control" name="audio[language]" disabled>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-channels">Channels</label>
-                <input class="form-control" disabled>
+                <label>Channels</label>
+                <input class="form-control" name="audio[channels]" disabled>
             </div>
         </div>
 
-        <div id="video" class="clearfix">
+        <div class="video clearfix">
             <div class="form-group col-sm-2">
                 <label>Video Enabled?</label>
 
                 <div>
-                    <input class="radio-inline" name="video-enabled" value="1" id="video-enabled" type="radio"> Yes
-                    <input class="radio-inline" name="video-enabled" value="0" id="video-enabled" type="radio" checked> No
+                    <input class="radio-inline" name="video[enabled]" value="1" type="radio"> Yes
+                    <input class="radio-inline" name="video[enabled]" value="0" type="radio" checked> No
                 </div>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-enabled">Bitrate</label>
-                <input class="form-control" disabled>
+                <label>Bitrate</label>
+                <input class="form-control" name="video[bitrate]" disabled>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-enabled">Codec</label>
-                <input class="form-control" disabled>
+                <label>Codec</label>
+                <input class="form-control" name="video[codec]" disabled>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-enabled">Maximum Width</label>
-                <input class="form-control" disabled>
+                <label>Maximum Width</label>
+                <input class="form-control" name="video[width]" disabled>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-enabled">Maximum Height</label>
-                <input class="form-control" disabled>
+                <label>Maximum Height</label>
+                <input class="form-control" name="video[height]" disabled>
             </div>
         </div>
 
-        <div id="subtitles" class="clearfix">
+        <div class="subtitles clearfix">
             <div class="form-group col-sm-2">
-                <label for="subs-enabled">Subtitles Enabled?</label>
+                <label>Subtitles Enabled?</label>
 
                 <div>
-                    <input class="radio-inline" name="subs-enabled" value="1" id="subs-enabled" type="radio"> Yes
-                    <input class="radio-inline" name="subs-enabled" value="0" id="subs-disabled" type="radio" checked> No
+                    <input class="radio-inline" name="subtitle[enabled]" value="1" type="radio"> Yes
+                    <input class="radio-inline" name="subtitle[enabled]" value="0" type="radio" checked> No
                 </div>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="audio-enabled">Language</label>
-                <input class="form-control" disabled>
+                <label>Language</label>
+                <input class="form-control" name="subtitle[language]" disabled>
             </div>
         </div>
 
         <hr>
         
-        <div id="extra" class="clearfix">
+        <div class="extra clearfix">
             <div class="form-group col-sm-12">
-                <label for="subs-enabled">Miscellaneous Options</label>
+                <label>Miscellaneous Options</label>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="high-priority">High Priority</label>
+                <label>High Priority</label>
 
                 <div>
-                    <input class="radio-inline" name="high-priority" value="1" id="high-priority" type="radio"> Yes
-                    <input class="radio-inline" name="high-priority" value="0" id="high-priority" type="radio" checked> No
+                    <input class="radio-inline" name="misc[priority]" value="1" type="radio"> Yes
+                    <input class="radio-inline" name="misc[priority]" value="0" type="radio" checked> No
                 </div>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="deinterlace">Deinterlace Video</label>
+                <label>Deinterlace Video</label>
 
                 <div>
-                    <input class="radio-inline" name="deinterlace" value="1" id="deinterlace" type="radio"> Yes
-                    <input class="radio-inline" name="deinterlace" value="0" id="deinterlace" type="radio" checked> No
+                    <input class="radio-inline" name="misc[deinterlace]" value="1" type="radio"> Yes
+                    <input class="radio-inline" name="misc[deinterlace]" value="0" type="radio" checked> No
                 </div>
             </div>
 
             <div class="form-group col-sm-2">
-                <label for="high-priority">Frames Per Second</label>
-                <input class="form-control">
+                <label>Frames Per Second</label>
+                <input class="form-control" name="misc[fps]">
             </div>
         </div>
 
         <div class="form-group col-sm-12">
-            <label for="output">Command Output</label>
+            <label>Command Output</label>
 
-            <textarea class="form-control" id="output" readonly></textarea>
+            <textarea class="output form-control" readonly></textarea>
         </div>
     </form>
 

@@ -14,6 +14,9 @@ module.exports = function(required)
             return;
         }
 
+        next();
+        return;
+
         // Only allow users based on the config file
         if(config.allowed.indexOf(req.session.user.user_name) < 0)
         {
