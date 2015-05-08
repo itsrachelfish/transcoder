@@ -15,6 +15,9 @@ var defaults =
 
 function generateCommand()
 {
+    var form = $('form').serializeObject();
+    console.log(form);
+    
     // Internal state
     var command = $('#command').val();
     var output = [];
