@@ -15,26 +15,22 @@ var defaults =
 
 function generateCommand()
 {
-    var form = $('form').serializeObject();
-    console.log(form);
-    
     // Internal state
-    var command = $('#command').val();
+    var form = $('form').serializeObject();
     var output = [];
 
     // References to form elements
-    var $output = $('#output');
-    var $infile = $('#infile');
-    var $outfile = $('#outfile');
+    var $output = $('.output');
 
-
-    if(command)
+    if(form.command)
     {
+        var command = form.command;
+        
         // Define actual command names
         output.push(commands[command]);
 
         // Include the filename
-        output.push($infile.val());
+        output.push(form.file.in);
 
         // Additional options
         output.push(defaults[command]);
