@@ -90,14 +90,14 @@
                 <label>Subtitles Enabled?</label>
 
                 <div>
-                    <input class="radio-inline enable-row" name="subtitle[enabled]" value="1" type="radio"> Yes
-                    <input class="radio-inline enable-row" name="subtitle[enabled]" value="0" type="radio" checked> No
+                    <input class="radio-inline enable-row" name="subtitles[enabled]" value="1" type="radio"> Yes
+                    <input class="radio-inline enable-row" name="subtitles[enabled]" value="0" type="radio" checked> No
                 </div>
             </div>
 
             <div class="form-group col-sm-2">
                 <label>Language</label>
-                <input class="form-control" name="subtitle[language]" disabled>
+                <input class="form-control" name="subtitles[language]" disabled>
             </div>
         </div>
 
