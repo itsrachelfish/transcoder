@@ -23,13 +23,13 @@
             <input class="form-control" name="file[out]">
         </div>
 
-        <div class="audio clearfix">
+        <div class="audio options-row clearfix">
             <div class="form-group col-sm-2">
                 <label>Audio Enabled?</label>
 
                 <div>
-                    <input class="radio-inline" name="audio[enabled]" value="1" type="radio"> Yes
-                    <input class="radio-inline" name="audio[enabled]" value="0" type="radio" checked> No
+                    <input class="radio-inline enable-row" name="audio[enabled]" value="1" type="radio"> Yes
+                    <input class="radio-inline enable-row" name="audio[enabled]" value="0" type="radio" checked> No
                 </div>
             </div>
 
@@ -54,13 +54,13 @@
             </div>
         </div>
 
-        <div class="video clearfix">
+        <div class="video options-row clearfix">
             <div class="form-group col-sm-2">
                 <label>Video Enabled?</label>
 
                 <div>
-                    <input class="radio-inline" name="video[enabled]" value="1" type="radio"> Yes
-                    <input class="radio-inline" name="video[enabled]" value="0" type="radio" checked> No
+                    <input class="radio-inline enable-row" name="video[enabled]" value="1" type="radio"> Yes
+                    <input class="radio-inline enable-row" name="video[enabled]" value="0" type="radio" checked> No
                 </div>
             </div>
 
@@ -85,13 +85,13 @@
             </div>
         </div>
 
-        <div class="subtitles clearfix">
+        <div class="subtitles options-row clearfix">
             <div class="form-group col-sm-2">
                 <label>Subtitles Enabled?</label>
 
                 <div>
-                    <input class="radio-inline" name="subtitle[enabled]" value="1" type="radio"> Yes
-                    <input class="radio-inline" name="subtitle[enabled]" value="0" type="radio" checked> No
+                    <input class="radio-inline enable-row" name="subtitle[enabled]" value="1" type="radio"> Yes
+                    <input class="radio-inline enable-row" name="subtitle[enabled]" value="0" type="radio" checked> No
                 </div>
             </div>
 

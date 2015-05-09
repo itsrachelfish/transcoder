@@ -50,4 +50,12 @@ $(document).ready(function()
     {
         generateCommand();
     });
+
+    $('body').on('change', '.enable-row', function()
+    {
+        var row = $(this).parents('.options-row');
+        var enabled = parseInt($(this).val()) ? true : false;
+        
+        row.find('input').not('.enable-row').prop('disabled', !enabled);
+    });
 });
