@@ -22,6 +22,9 @@
 
         <!-- Custom scripts -->
         <script src="/js/transcode.js"></script>
+        <script src="/js/commands/ffmpeg.js"></script>
+        <script src="/js/commands/gstreamer.js"></script>
+        <script src="/js/commands/vlc.js"></script>
     </head>
     
     <body>
