@@ -1,37 +1,10 @@
-var commands =
-{
-    ffmpeg: 'ffmpeg',
-    gstreamer: 'gst-launch',
-    vlc: 'cvlc'
-};
-
-// Extra options included with each command
-var extra =
-{
-    ffmpeg:
-    {
-        prepend: '',
-        append: ''
-    },
-    
-    gstreamer:
-    {
-        prepend: '',
-        append: '',
-    },
-    
-    vlc:
-    {
-        prepend: '-I dummy',
-        append: 'vlc://quit'
-    }
-};
+var commands = {};
 
 function generateCommand()
 {
     // Internal state
     var form = $('form').serializeObject();
-    var output = [];
+    var output;
 
     // References to form elements
     var $output = $('.output');
@@ -40,34 +13,12 @@ function generateCommand()
     {
         var command = form.command;
         var options;
+
+        if(typeof commands[command] == "function")
+        {
+            output = commands[command](form);
+        }
         
-        // Define actual command names
-        output.push(commands[command]);
-
-        // Include the filename
-        output.push(form.file.in);
-
-        // Prepend additional options
-        output.push(extra[command].prepend);
-
-        if(command == "ffmpeg")
-        {
-            options = ffmpegOptions(form);
-        }
-        else if(command == "gstreamer")
-        {
-            options = gstreamerOptions(form);
-        }
-        else if(command == "vlc")
-        {
-            options = vlcOptions(form);
-        }
-
-        output = output.concat(options);
-
-        // Append additional options
-        output.push(extra[command].append);
-
         // Display output
         $output.val(output.join(' '));
     }

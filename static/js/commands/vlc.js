@@ -1,7 +1,14 @@
-function vlcOptions(form)
+commands.vlc = function(form)
 {
-    var options = [];
+    var output = ['cvlc'];
     var sout = [];
+
+    if(form.file.in)
+    {
+        output.push(form.file.in);
+    }
+
+    output.push('-I dummy');
 
     if(parseInt(form.audio.enabled))
     {
@@ -17,12 +24,12 @@ function vlcOptions(form)
 
         if(form.audio.language)
         {
-            options.push('--audio-language=' + form.audio.language);
+            output.push('--audio-language=' + form.audio.language);
         }
 
         if(form.audio.channels)
         {
-            options.push('--sout-transcode-channels=' + form.audio.channels);
+            output.push('--sout-transcode-channels=' + form.audio.channels);
         }
     }
 
@@ -40,12 +47,12 @@ function vlcOptions(form)
 
         if(form.video.width)
         {
-            options.push('--sout-transcode-maxwidth=' + form.video.width);
+            output.push('--sout-transcode-maxwidth=' + form.video.width);
         }
 
         if(form.video.height)
         {
-            options.push('--sout-transcode-maxheight=' + form.video.height);
+            output.push('--sout-transcode-maxheight=' + form.video.height);
         }
     }
 
@@ -55,13 +62,13 @@ function vlcOptions(form)
         
         if(form.subtitles.language)
         {
-            options.push('--sub-language=' + form.subtitles.language);
+            output.push('--sub-language=' + form.subtitles.language);
         }
     }
 
     if(parseInt(form.misc.priority))
     {
-        options.push('--sout-transcode-high-priority');
+        output.push('--sout-transcode-high-priority');
     }
 
     if(parseInt(form.misc.deinterlace))
@@ -82,7 +89,8 @@ function vlcOptions(form)
     }
 
     sout = sout.join(',');
-    options.push(":sout='#transcode{" + sout + "} " + outfile + "'");
+    output.push(":sout='#transcode{" + sout + "} " + outfile + "'");
+    output.push('vlc://quit');
 
-    return options;
+    return output;
 }

@@ -1,4 +1,5 @@
-function gstreamerOptions(form)
+commands.gstreamer = function(form)
 {
-    return [];
+    var output = ['gst-launch'];
+    return output;
 }
